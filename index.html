@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+
+    <link rel="stylesheet" href="Css/home.css">
+
+    <!--    <style>
+            .video_back {
+                /*设置视频最小宽度和高度*/
+                /*min-width: 100%;
+                min-height:100%;*/
+                /**/
+                /*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。可以根据实际情况修改*/
+                position: absolute;
+                /*这里我试了一下好像只要是矩形的四个角的的点都行,也就是说right:0;bottom:0;也可以*/
+                left: 0;
+                top: 0;
+                /*将视频放在元素的堆叠顺序最底层，以防覆盖其他东西*/
+                z-index: -9999;
+                /*被替换的内容正好填充元素的内容框。整个对象将完全填充此框。如果对象的宽高比与内容框不相匹配，那么该对象将被拉伸以适应内容框。*/
+                object-fit: fill;
+            }
+        </style>-->
+</head>
+<body>
+
+<div id="main">
+    <ul id="list">
+        <li>
+            <a href="index.html">首页</a>
+        </li>
+        <li>
+            <a href="Html/coach.html">教练团队介绍</a>
+        </li>
+        <li>
+            <a>球员介绍</a>
+            <ul>
+                <li><a href="Html/stirker.html">前锋和门将</a></li>
+                <li><a href="Html/midfielder.html">中场</a></li>
+                <li><a href="Html/fullback.html">后卫</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!--图片轮播-->
+<table width="1050" height="500" frame=void>
+    <tr>
+        <td style="text-align: center; width: 100%; margin: 0 ;padding: 0" >
+            <!--image slider start-->
+            <div class="slider">
+                <div class="slides">
+
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+                    <input type="radio" name="radio-btn" id="radio6">
+
+                    <div class="slide first">
+                        <img src="lib/home/1.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="lib/home/2.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="lib/home/3.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="lib/home/4.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="lib/home/陪伴1.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="lib/home/陪伴2.jpg" alt="">
+                    </div>
+
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                        <div class="auto-btn5"></div>
+                        <div class="auto-btn6"></div>
+                    </div>
+
+                </div>
+
+                <div class="navigation-nanual">
+                    <label for="radio1" class="nanual-btn"></label>
+                    <label for="radio2" class="nanual-btn"></label>
+                    <label for="radio3" class="nanual-btn"></label>
+                    <label for="radio4" class="nanual-btn"></label>
+                    <label for="radio5" class="nanual-btn"></label>
+                    <label for="radio6" class="nanual-btn"></label>
+                </div>
+
+            </div>
+            <!--image slider end-->
+        </td>
+    </tr>
+</table>
+
+
+
+
+<!--视频-->
+<table frame=void>
+    <tr>
+        <td width="700" height="450">
+            <video class="video_back" src="lib/颁奖典礼.mp4" width="1000px" height="400px" controls="controls"></video>
+        </td>
+    </tr>
+</table>
+
+<table frame=void style="text-align: left">
+    <tr>
+        <td>
+            阿根廷国家男子足球队（Argentina national football team）的管理机构是阿根廷足球协会，
+            该队是世界上最成功的国家队之一，曾21次夺取过国家队重大赛事的冠军，
+            包括三次称雄世界杯（1978、1986、2022年）、15次夺得美洲杯、两次获得奥运男足金牌（2004、2008年）以及一次联合会杯。
+            2018俄罗斯世界杯阿根廷以D组第二名惊险晋级16强。
+            2018年6月30日，俄罗斯世界杯淘汰赛正式打响，阿根廷3-4不敌法国，无缘8强。
+            2021年，阿根廷国家队夺得美洲杯冠军。
+            2022卡塔尔世界杯，阿根廷以C组头名晋级，一路战胜澳大利亚、荷兰（点球）、克罗地亚挺进决赛。
+            2022年12月18日，世界杯决赛上阿根廷通过点球大战击败法国，赢得2022年卡塔尔世界杯冠军。
+        </td>
+    </tr>
+</table>
+
+
+<script type="text/javascript">
+    var counter = 1;
+    setInterval(function (){
+        document.getElementById('radio'+counter).checked=true;
+        counter++;
+        if(counter>6)
+            counter=1;
+    },2500);
+</script>
+</body>
+</html>
