@@ -1,52 +1,9 @@
-*{
-    padding: 0px;
-    margin: 0px;
-}
-#main{
-    overflow: auto;
-    text-align: center;
-}
-
-a{
-    text-decoration: none;
-    display: inline-block;
-    height: 50px;
-    width: 150px;
-    color: black;
-    background-color: #f1f1f1;
-    line-height: 40px;
-}
-ul{
-    list-style: none;
-}
-
-#list{
-    display: inline-block;
-    margin: 0px;
-    padding: 0px;
-    vertical-align: bottom;
-}
-
-#list>li{
-    float: left;
-}
-
-#list>li>ul{
-    display: none;
-    position: absolute;
-}
-
-#list>li:hover ul{
-    display: block;
-}
-
-a:hover {
-    background-color: #555;
-    color: white;
-}
-
 p{
-    text-indent: 2em
+    text-indent: 2em;
+    margin-top:30px
+}
+img{
+    margin-top:30px
 }
 
 table {
